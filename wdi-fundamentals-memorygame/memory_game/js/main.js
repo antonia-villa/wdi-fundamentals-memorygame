@@ -1,3 +1,5 @@
+
+// Define cards array with all attributes for each available card
 var cards = [
 {
 	rank: 'queen',
@@ -21,8 +23,10 @@ var cards = [
 	cardImage: "images/king-of-diamonds.png"	
 }];
 
+// Create an empty array for cards in Play
 var cardsInPlay = [];
 
+// Check to see if cards flipped match
 var checkForMatch = function() {
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 		alert("You found a match!");
@@ -49,7 +53,7 @@ var flipCard = function () {
     checkForMatch();
     // clear the array for the next round
     cardsInPlay = [];
-  }
+  };
 };
 
 // Create Board function 
@@ -71,9 +75,9 @@ var createBoard = function () {
     // Append the card to the game board
     document.getElementById('game-board').appendChild(cardElement);
 
-  }
+  };
 
-}
+};
 
 // Create the board by calling the CreatBoad function
 createBoard();
